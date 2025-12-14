@@ -24,3 +24,13 @@ The goal was to leverage a smaller, high-fidelity CFD dataset—focused on chall
 The results of this fine-tuned model on unseen data(not in both dataset):
 
 ![Cp comparison between airfoil-ml , Fine-tuned airfoil-ml , ground truth CFD data](media/cp_comparison.png)
+
+---
+Freezing initial layers and fine tuning the latest is also performed to prevent catastrophic forgotting. 
+
+![Cp comparison between airfoil-ml , Fine-tuned airfoil-ml , exprimental data](media/ftvsexp.png)
+
+The exprimental data is from [Cp validation data](https://turbmodels.larc.nasa.gov/NACA0012_validation/CP_Ladson.dat)
+
+---
+The model is deployed in Hugging face space and ready to use for Naca 4 and 5 digits airfoils. [Hugging face space](https://huggingface.co/spaces/FaaaEs/xfoil-ml)
